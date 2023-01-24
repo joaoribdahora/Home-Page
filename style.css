@@ -119,10 +119,16 @@ p{
     font-weight: bold;
     font-size: 20px;
     color:hsl(0, 0%, 98%);
-    padding: 17px 35px;
+    padding: 17px 34px;
     background-color: hsl(0, 0%, 8%);
     border-radius: 15px;
     cursor: pointer;
+}
+.learn:hover{
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
+    color:hsl(0, 0%, 8%);
+    font-weight: bold;
 }
 aside{
     display: flex;
