@@ -7,7 +7,7 @@
 
 body{
     width: 1440px;
-    height: 700px;
+    height: 900px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 60px auto;
@@ -93,7 +93,20 @@ img{
     object-fit: contain;
 }
 
+.icon{
+    width: 50px;
+    height: 30px;
+    display: none;
+    margin: 6px 10px 0px 0px;
+}
+.bar{
+    width: 80%;
+    height: 4px;
+    background-color: hsl(0, 0%, 8%);
+}
 section{
+    width: auto;
+    height: auto;
     padding-left: 90px;
     padding-top: 70px;
     font-family:'Epilogue', sans-serif;
@@ -119,7 +132,9 @@ p{
     font-weight: bold;
     font-size: 20px;
     color:hsl(0, 0%, 98%);
-    padding: 17px 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(0, 0%, 8%);
     border-radius: 15px;
     cursor: pointer;
@@ -131,6 +146,8 @@ p{
     font-weight: bold;
 }
 aside{
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,4 +161,81 @@ aside{
     width: 70%;
     display: flex;
     justify-content: space-around;
+}
+.mobile_image{
+    width: 100%;
+    display: none;
+    object-fit: contain;
+}
+
+@media( max-width: 375px){  
+    .infos, .signIn{
+        display: none;
+    }
+
+    body{
+        width: 375px;
+        height: 780px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 40px auto auto;
+        grid-gap: 0px;
+    }
+
+    section{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        width: 375px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 0px;
+    }
+    aside{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 375px;
+        height: auto;
+    }
+
+    .image{
+        display: none;
+    }
+    .mobile_image{
+        display: block;
+    }
+    br{
+        display: none;
+    }
+    h1, p{
+        text-align: center;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        width: 365px;
+        font-size: 20px;
+    }
+    .learn{
+        width: 110px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer img{
+        width: 80px;
+    }
+
+    .icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
