@@ -8,19 +8,21 @@
 body{
     width: 1440px;
     height: 900px;
+    background-color: hsl(0, 0%, 98%);
+
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 60px auto;
     grid-gap: 5px;
 
     font-family:'Epilogue', sans-serif;
-
-    background-color: hsl(0, 0%, 98%);
 }
+
 
 header{
     grid-column-start: 1;
     grid-column-end: 3;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,31 +30,34 @@ header{
 .main{
     width: auto;
     height: 100%;
+
     display: flex;
     flex-direction: row;
-}
-.infos{
-    width: 600px;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 .logo{
     height: 50px;
     width: 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.infos{
+    width: 600px;
+    height: 50px;
 
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .op{
     width: 90px;
     height: 50px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     color: hsl(0, 0%, 41%);
     cursor: pointer;
 }
@@ -65,34 +70,33 @@ header{
 .company{
     justify-content: space-around;
 }
-
 .signIn{
     width: 200px;
     height: 50px;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     color: hsl(0, 0%, 41%);
 }
 .register{
     width: 90px;
     height: 40px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    
     border: 2px solid hsl(0, 0%, 41%);
     border-radius: 15px;
+    
     cursor: pointer;
 }
 .register:hover{
     border: 2px solid hsl(0, 0%, 8%);
     color: hsl(0, 0%, 8%);
 }
-
-img{
-    object-fit: contain;
-}
-
 .icon{
     width: 50px;
     height: 30px;
@@ -104,15 +108,20 @@ img{
     height: 4px;
     background-color: hsl(0, 0%, 8%);
 }
+
+
 section{
     width: auto;
     height: auto;
-    padding-left: 90px;
-    padding-top: 70px;
-    font-family:'Epilogue', sans-serif;
+   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+   
+    font-family:'Epilogue', sans-serif;
+
+    padding-left: 90px;
+    padding-top: 70px;
 }
 h1{
     width:500px;
@@ -129,13 +138,16 @@ p{
 .learn{
     width: 180px;
     height: 60px;
-    font-weight: bold;
-    font-size: 20px;
-    color:hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(0, 0%, 8%);
+ 
+    font-weight: bold;
+    font-size: 20px;
+    color:hsl(0, 0%, 98%);
+    
     border-radius: 15px;
     cursor: pointer;
 }
@@ -145,22 +157,28 @@ p{
     color:hsl(0, 0%, 8%);
     font-weight: bold;
 }
+.footer{
+    width: 70%;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+
 aside{
     width: auto;
     height: auto;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+img{
+    object-fit: contain;
+}
 .image{
     height: 600px;
     object-fit: fill;
-}
-.footer{
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
 }
 .mobile_image{
     width: 100%;
@@ -168,44 +186,46 @@ aside{
     object-fit: contain;
 }
 
-@media( max-width: 375px){  
-    .infos, .signIn{
-        display: none;
-    }
 
-    body{
+
+@media( max-width: 375px){  
+     body{
         width: 375px;
         height: 780px;
+        
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 40px auto auto;
         grid-gap: 0px;
     }
 
+    header{
+        width: 100%;
+    }
+    .infos, .signIn{
+        display: none;
+    }
+    .icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     section{
         grid-row-start: 3;
         grid-row-end: 4;
+        
         width: 375px;
         height: auto;
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        
         padding-top: 20px;
         padding-left: 0px;
-    }
-    aside{
-        grid-row-start: 2;
-        grid-row-end: 3;
-        width: 375px;
-        height: auto;
-    }
-
-    .image{
-        display: none;
-    }
-    .mobile_image{
-        display: block;
     }
     br{
         display: none;
@@ -231,11 +251,19 @@ aside{
     .footer img{
         width: 80px;
     }
+    
 
-    .icon{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+    aside{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        
+        width: 375px;
+        height: auto;
+    }
+    .image{
+        display: none;
+    }
+    .mobile_image{
+        display: block;
     }
 }
