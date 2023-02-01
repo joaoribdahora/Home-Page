@@ -8,7 +8,7 @@
 body{
     width: 1440px;
     height: 900px;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 93%);
 
     display: grid;
     grid-template-columns: auto auto;
@@ -28,12 +28,13 @@ header{
     justify-content: space-between;
 
     position: relative;
+
+    color:hsl(0, 0%, 41%);
 }
 .box1, .box2{
-    display: block;
     position: absolute;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -63,7 +64,12 @@ header{
     align-items: center;
 
     font-family:'Epilogue', sans-serif;
-    color: hsl(0, 0%, 41%);
+    
+    border-radius: 10px;
+    cursor: pointer;
+}
+.line:hover{
+    background-color: rgba(201, 198, 198, 0.301);
 }
 span{
     font-weight: bold;
@@ -99,16 +105,12 @@ span{
     justify-content: center;
     align-items: center;
 
-    color: hsl(0, 0%, 41%);
     cursor: pointer;
 }
 .op:hover{
     color: hsl(0, 0%, 8%);
 }
-.features{
-    justify-content: space-around;
-}
-.company{
+.features, .company{
     justify-content: space-around;
 }
 .signIn{
@@ -118,8 +120,6 @@ span{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    color: hsl(0, 0%, 41%);
 }
 .register{
     width: 90px;
@@ -193,7 +193,7 @@ p{
     cursor: pointer;
 }
 .learn:hover{
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsla(0, 100%, 99%, 0);
     border: 1px solid hsl(0, 0%, 8%);
     color:hsl(0, 0%, 8%);
     font-weight: bold;
